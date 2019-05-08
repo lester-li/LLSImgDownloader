@@ -1,0 +1,640 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 50;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		C680D74D22800DF1001C06D0 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = C680D74C22800DF1001C06D0 /* AppDelegate.m */; };
+		C680D75022800DF1001C06D0 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C680D74F22800DF1001C06D0 /* ViewController.m */; };
+		C680D75322800DF1001C06D0 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C680D75122800DF1001C06D0 /* Main.storyboard */; };
+		C680D75522800DF5001C06D0 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C680D75422800DF5001C06D0 /* Assets.xcassets */; };
+		C680D75822800DF5001C06D0 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C680D75622800DF5001C06D0 /* LaunchScreen.storyboard */; };
+		C680D75B22800DF5001C06D0 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = C680D75A22800DF5001C06D0 /* main.m */; };
+		C680D76522800DF5001C06D0 /* LLSImageDownloaderTests.m in Sources */ = {isa = PBXBuildFile; fileRef = C680D76422800DF5001C06D0 /* LLSImageDownloaderTests.m */; };
+		C680D77022800DF5001C06D0 /* LLSImageDownloaderUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = C680D76F22800DF5001C06D0 /* LLSImageDownloaderUITests.m */; };
+		C680D78022800E36001C06D0 /* LLSImageOperation.m in Sources */ = {isa = PBXBuildFile; fileRef = C680D77F22800E36001C06D0 /* LLSImageOperation.m */; };
+		C680D78422801D40001C06D0 /* LLSImageDownloder.m in Sources */ = {isa = PBXBuildFile; fileRef = C680D78322801D40001C06D0 /* LLSImageDownloder.m */; };
+		C680D78822815C50001C06D0 /* LLSImgCache.m in Sources */ = {isa = PBXBuildFile; fileRef = C680D78722815C50001C06D0 /* LLSImgCache.m */; };
+		C680D78B22818E14001C06D0 /* LLSImgManager.m in Sources */ = {isa = PBXBuildFile; fileRef = C680D78A22818E14001C06D0 /* LLSImgManager.m */; };
+		C680D78F228273DF001C06D0 /* UIImageView+LLSImageSetting.m in Sources */ = {isa = PBXBuildFile; fileRef = C680D78E228273DF001C06D0 /* UIImageView+LLSImageSetting.m */; };
+		C680D795228279F0001C06D0 /* NSString+md5.m in Sources */ = {isa = PBXBuildFile; fileRef = C680D794228279F0001C06D0 /* NSString+md5.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		C680D76122800DF5001C06D0 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = C680D74022800DF0001C06D0 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = C680D74722800DF1001C06D0;
+			remoteInfo = LLSImageDownloader;
+		};
+		C680D76C22800DF5001C06D0 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = C680D74022800DF0001C06D0 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = C680D74722800DF1001C06D0;
+			remoteInfo = LLSImageDownloader;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		C680D74822800DF1001C06D0 /* LLSImageDownloader.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = LLSImageDownloader.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		C680D74B22800DF1001C06D0 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		C680D74C22800DF1001C06D0 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		C680D74E22800DF1001C06D0 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
+		C680D74F22800DF1001C06D0 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		C680D75222800DF1001C06D0 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		C680D75422800DF5001C06D0 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		C680D75722800DF5001C06D0 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		C680D75922800DF5001C06D0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		C680D75A22800DF5001C06D0 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		C680D76022800DF5001C06D0 /* LLSImageDownloaderTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = LLSImageDownloaderTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		C680D76422800DF5001C06D0 /* LLSImageDownloaderTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LLSImageDownloaderTests.m; sourceTree = "<group>"; };
+		C680D76622800DF5001C06D0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		C680D76B22800DF5001C06D0 /* LLSImageDownloaderUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = LLSImageDownloaderUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		C680D76F22800DF5001C06D0 /* LLSImageDownloaderUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LLSImageDownloaderUITests.m; sourceTree = "<group>"; };
+		C680D77122800DF5001C06D0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		C680D77E22800E36001C06D0 /* LLSImageOperation.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LLSImageOperation.h; sourceTree = "<group>"; };
+		C680D77F22800E36001C06D0 /* LLSImageOperation.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LLSImageOperation.m; sourceTree = "<group>"; };
+		C680D78122801400001C06D0 /* Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Header.h; sourceTree = "<group>"; };
+		C680D78222801D40001C06D0 /* LLSImageDownloder.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LLSImageDownloder.h; sourceTree = "<group>"; };
+		C680D78322801D40001C06D0 /* LLSImageDownloder.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LLSImageDownloder.m; sourceTree = "<group>"; };
+		C680D78622815C50001C06D0 /* LLSImgCache.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LLSImgCache.h; sourceTree = "<group>"; };
+		C680D78722815C50001C06D0 /* LLSImgCache.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LLSImgCache.m; sourceTree = "<group>"; };
+		C680D78922818E14001C06D0 /* LLSImgManager.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LLSImgManager.h; sourceTree = "<group>"; };
+		C680D78A22818E14001C06D0 /* LLSImgManager.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LLSImgManager.m; sourceTree = "<group>"; };
+		C680D78D228273DF001C06D0 /* UIImageView+LLSImageSetting.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UIImageView+LLSImageSetting.h"; sourceTree = "<group>"; };
+		C680D78E228273DF001C06D0 /* UIImageView+LLSImageSetting.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UIImageView+LLSImageSetting.m"; sourceTree = "<group>"; };
+		C680D792228274A9001C06D0 /* LLSHeader.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LLSHeader.h; sourceTree = "<group>"; };
+		C680D793228279F0001C06D0 /* NSString+md5.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "NSString+md5.h"; sourceTree = "<group>"; };
+		C680D794228279F0001C06D0 /* NSString+md5.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "NSString+md5.m"; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		C680D74522800DF1001C06D0 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		C680D75D22800DF5001C06D0 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		C680D76822800DF5001C06D0 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		C680D73F22800DF0001C06D0 = {
+			isa = PBXGroup;
+			children = (
+				C680D74A22800DF1001C06D0 /* LLSImageDownloader */,
+				C680D76322800DF5001C06D0 /* LLSImageDownloaderTests */,
+				C680D76E22800DF5001C06D0 /* LLSImageDownloaderUITests */,
+				C680D74922800DF1001C06D0 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		C680D74922800DF1001C06D0 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				C680D74822800DF1001C06D0 /* LLSImageDownloader.app */,
+				C680D76022800DF5001C06D0 /* LLSImageDownloaderTests.xctest */,
+				C680D76B22800DF5001C06D0 /* LLSImageDownloaderUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		C680D74A22800DF1001C06D0 /* LLSImageDownloader */ = {
+			isa = PBXGroup;
+			children = (
+				C680D74B22800DF1001C06D0 /* AppDelegate.h */,
+				C680D74C22800DF1001C06D0 /* AppDelegate.m */,
+				C680D74E22800DF1001C06D0 /* ViewController.h */,
+				C680D74F22800DF1001C06D0 /* ViewController.m */,
+				C680D78122801400001C06D0 /* Header.h */,
+				C680D78C2282739A001C06D0 /* LLSCategory */,
+				C680D77D22800E10001C06D0 /* imageDownloader */,
+				C680D75122800DF1001C06D0 /* Main.storyboard */,
+				C680D75422800DF5001C06D0 /* Assets.xcassets */,
+				C680D75622800DF5001C06D0 /* LaunchScreen.storyboard */,
+				C680D75922800DF5001C06D0 /* Info.plist */,
+				C680D75A22800DF5001C06D0 /* main.m */,
+			);
+			path = LLSImageDownloader;
+			sourceTree = "<group>";
+		};
+		C680D76322800DF5001C06D0 /* LLSImageDownloaderTests */ = {
+			isa = PBXGroup;
+			children = (
+				C680D76422800DF5001C06D0 /* LLSImageDownloaderTests.m */,
+				C680D76622800DF5001C06D0 /* Info.plist */,
+			);
+			path = LLSImageDownloaderTests;
+			sourceTree = "<group>";
+		};
+		C680D76E22800DF5001C06D0 /* LLSImageDownloaderUITests */ = {
+			isa = PBXGroup;
+			children = (
+				C680D76F22800DF5001C06D0 /* LLSImageDownloaderUITests.m */,
+				C680D77122800DF5001C06D0 /* Info.plist */,
+			);
+			path = LLSImageDownloaderUITests;
+			sourceTree = "<group>";
+		};
+		C680D77D22800E10001C06D0 /* imageDownloader */ = {
+			isa = PBXGroup;
+			children = (
+				C680D77E22800E36001C06D0 /* LLSImageOperation.h */,
+				C680D77F22800E36001C06D0 /* LLSImageOperation.m */,
+				C680D78222801D40001C06D0 /* LLSImageDownloder.h */,
+				C680D78322801D40001C06D0 /* LLSImageDownloder.m */,
+				C680D78622815C50001C06D0 /* LLSImgCache.h */,
+				C680D78722815C50001C06D0 /* LLSImgCache.m */,
+				C680D78922818E14001C06D0 /* LLSImgManager.h */,
+				C680D78A22818E14001C06D0 /* LLSImgManager.m */,
+				C680D793228279F0001C06D0 /* NSString+md5.h */,
+				C680D794228279F0001C06D0 /* NSString+md5.m */,
+			);
+			path = imageDownloader;
+			sourceTree = "<group>";
+		};
+		C680D78C2282739A001C06D0 /* LLSCategory */ = {
+			isa = PBXGroup;
+			children = (
+				C680D78D228273DF001C06D0 /* UIImageView+LLSImageSetting.h */,
+				C680D78E228273DF001C06D0 /* UIImageView+LLSImageSetting.m */,
+				C680D792228274A9001C06D0 /* LLSHeader.h */,
+			);
+			path = LLSCategory;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		C680D74722800DF1001C06D0 /* LLSImageDownloader */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = C680D77422800DF5001C06D0 /* Build configuration list for PBXNativeTarget "LLSImageDownloader" */;
+			buildPhases = (
+				C680D74422800DF1001C06D0 /* Sources */,
+				C680D74522800DF1001C06D0 /* Frameworks */,
+				C680D74622800DF1001C06D0 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = LLSImageDownloader;
+			productName = LLSImageDownloader;
+			productReference = C680D74822800DF1001C06D0 /* LLSImageDownloader.app */;
+			productType = "com.apple.product-type.application";
+		};
+		C680D75F22800DF5001C06D0 /* LLSImageDownloaderTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = C680D77722800DF5001C06D0 /* Build configuration list for PBXNativeTarget "LLSImageDownloaderTests" */;
+			buildPhases = (
+				C680D75C22800DF5001C06D0 /* Sources */,
+				C680D75D22800DF5001C06D0 /* Frameworks */,
+				C680D75E22800DF5001C06D0 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				C680D76222800DF5001C06D0 /* PBXTargetDependency */,
+			);
+			name = LLSImageDownloaderTests;
+			productName = LLSImageDownloaderTests;
+			productReference = C680D76022800DF5001C06D0 /* LLSImageDownloaderTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		C680D76A22800DF5001C06D0 /* LLSImageDownloaderUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = C680D77A22800DF5001C06D0 /* Build configuration list for PBXNativeTarget "LLSImageDownloaderUITests" */;
+			buildPhases = (
+				C680D76722800DF5001C06D0 /* Sources */,
+				C680D76822800DF5001C06D0 /* Frameworks */,
+				C680D76922800DF5001C06D0 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				C680D76D22800DF5001C06D0 /* PBXTargetDependency */,
+			);
+			name = LLSImageDownloaderUITests;
+			productName = LLSImageDownloaderUITests;
+			productReference = C680D76B22800DF5001C06D0 /* LLSImageDownloaderUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		C680D74022800DF0001C06D0 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 1010;
+				ORGANIZATIONNAME = "美好午后";
+				TargetAttributes = {
+					C680D74722800DF1001C06D0 = {
+						CreatedOnToolsVersion = 10.1;
+					};
+					C680D75F22800DF5001C06D0 = {
+						CreatedOnToolsVersion = 10.1;
+						TestTargetID = C680D74722800DF1001C06D0;
+					};
+					C680D76A22800DF5001C06D0 = {
+						CreatedOnToolsVersion = 10.1;
+						TestTargetID = C680D74722800DF1001C06D0;
+					};
+				};
+			};
+			buildConfigurationList = C680D74322800DF0001C06D0 /* Build configuration list for PBXProject "LLSImageDownloader" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = C680D73F22800DF0001C06D0;
+			productRefGroup = C680D74922800DF1001C06D0 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				C680D74722800DF1001C06D0 /* LLSImageDownloader */,
+				C680D75F22800DF5001C06D0 /* LLSImageDownloaderTests */,
+				C680D76A22800DF5001C06D0 /* LLSImageDownloaderUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		C680D74622800DF1001C06D0 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C680D75822800DF5001C06D0 /* LaunchScreen.storyboard in Resources */,
+				C680D75522800DF5001C06D0 /* Assets.xcassets in Resources */,
+				C680D75322800DF1001C06D0 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		C680D75E22800DF5001C06D0 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		C680D76922800DF5001C06D0 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		C680D74422800DF1001C06D0 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C680D75022800DF1001C06D0 /* ViewController.m in Sources */,
+				C680D78022800E36001C06D0 /* LLSImageOperation.m in Sources */,
+				C680D78822815C50001C06D0 /* LLSImgCache.m in Sources */,
+				C680D78F228273DF001C06D0 /* UIImageView+LLSImageSetting.m in Sources */,
+				C680D75B22800DF5001C06D0 /* main.m in Sources */,
+				C680D78422801D40001C06D0 /* LLSImageDownloder.m in Sources */,
+				C680D795228279F0001C06D0 /* NSString+md5.m in Sources */,
+				C680D74D22800DF1001C06D0 /* AppDelegate.m in Sources */,
+				C680D78B22818E14001C06D0 /* LLSImgManager.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		C680D75C22800DF5001C06D0 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C680D76522800DF5001C06D0 /* LLSImageDownloaderTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		C680D76722800DF5001C06D0 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C680D77022800DF5001C06D0 /* LLSImageDownloaderUITests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		C680D76222800DF5001C06D0 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = C680D74722800DF1001C06D0 /* LLSImageDownloader */;
+			targetProxy = C680D76122800DF5001C06D0 /* PBXContainerItemProxy */;
+		};
+		C680D76D22800DF5001C06D0 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = C680D74722800DF1001C06D0 /* LLSImageDownloader */;
+			targetProxy = C680D76C22800DF5001C06D0 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		C680D75122800DF1001C06D0 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				C680D75222800DF1001C06D0 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		C680D75622800DF5001C06D0 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				C680D75722800DF5001C06D0 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		C680D77222800DF5001C06D0 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.1;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		C680D77322800DF5001C06D0 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.1;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		C680D77522800DF5001C06D0 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 4TEGC3M482;
+				INFOPLIST_FILE = LLSImageDownloader/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.newsky.LLSImageDownloader;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		C680D77622800DF5001C06D0 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 4TEGC3M482;
+				INFOPLIST_FILE = LLSImageDownloader/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.newsky.LLSImageDownloader;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		C680D77822800DF5001C06D0 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 4TEGC3M482;
+				INFOPLIST_FILE = LLSImageDownloaderTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.newsky.LLSImageDownloaderTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/LLSImageDownloader.app/LLSImageDownloader";
+			};
+			name = Debug;
+		};
+		C680D77922800DF5001C06D0 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 4TEGC3M482;
+				INFOPLIST_FILE = LLSImageDownloaderTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.newsky.LLSImageDownloaderTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/LLSImageDownloader.app/LLSImageDownloader";
+			};
+			name = Release;
+		};
+		C680D77B22800DF5001C06D0 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 4TEGC3M482;
+				INFOPLIST_FILE = LLSImageDownloaderUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.newsky.LLSImageDownloaderUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = LLSImageDownloader;
+			};
+			name = Debug;
+		};
+		C680D77C22800DF5001C06D0 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 4TEGC3M482;
+				INFOPLIST_FILE = LLSImageDownloaderUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.newsky.LLSImageDownloaderUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = LLSImageDownloader;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		C680D74322800DF0001C06D0 /* Build configuration list for PBXProject "LLSImageDownloader" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				C680D77222800DF5001C06D0 /* Debug */,
+				C680D77322800DF5001C06D0 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		C680D77422800DF5001C06D0 /* Build configuration list for PBXNativeTarget "LLSImageDownloader" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				C680D77522800DF5001C06D0 /* Debug */,
+				C680D77622800DF5001C06D0 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		C680D77722800DF5001C06D0 /* Build configuration list for PBXNativeTarget "LLSImageDownloaderTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				C680D77822800DF5001C06D0 /* Debug */,
+				C680D77922800DF5001C06D0 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		C680D77A22800DF5001C06D0 /* Build configuration list for PBXNativeTarget "LLSImageDownloaderUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				C680D77B22800DF5001C06D0 /* Debug */,
+				C680D77C22800DF5001C06D0 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = C680D74022800DF0001C06D0 /* Project object */;
+}
