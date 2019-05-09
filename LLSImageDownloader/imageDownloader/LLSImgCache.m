@@ -8,11 +8,14 @@
 
 #import "LLSImgCache.h"
 #import "NSString+md5.h"
+#import "LLSCachedImg.h"
 
 @interface LLSImgCache ()<NSCopying>
 
-@property (nonatomic,strong) NSCache *caches;
+//@property (nonatomic,strong) NSCache *caches;
+@property (nonatomic,strong) NSMutableDictionary *caches;
 @property (nonatomic,strong) dispatch_queue_t ioQueue;
+@property (nonatomic,assign) CGFloat totalCacheStandard;
 
 @end
 
@@ -39,9 +42,9 @@ LLSImgCache *singleInstance = nil;
 }
 
 #pragma mark -- access method
-- (NSCache *)caches{
+- (NSMutableDictionary *)caches{
     if (!_caches){
-        _caches = [NSCache new];
+        _caches = [NSMutableDictionary new];
     }
     return _caches;
 }
@@ -53,30 +56,72 @@ LLSImgCache *singleInstance = nil;
     return _ioQueue;
 }
 
+-(CGFloat)totalCacheStandard{
+    if (!_totalCacheStandard) {
+        _totalCacheStandard = 1024 * 1024 * 5;
+    }
+    return _totalCacheStandard;
+}
+
 
 #pragma mark -- public
 -(void)saveImgWithUrlKey:(NSString*)urlKey img:(UIImage*)img imgData:(NSData*)imgData isSaveToDisk:(BOOL)isSaveToDisk{
-    UIImage *localImg = [self.caches objectForKey:urlKey];
+    LLSCachedImg *localImg = [self.caches objectForKey:urlKey];
     if (!localImg) {
-        [_caches setObject:img forKey:urlKey];
+        __weak typeof(self) weakSelf = self;
+        dispatch_async(_ioQueue, ^{
+            typeof(self) strongSelf = weakSelf;
+            // 加入缓存
+            LLSCachedImg *cachedImg = [[LLSCachedImg alloc]initWithImg:img identifier:urlKey];
+            [strongSelf.caches setObject:cachedImg forKey:urlKey];
+            
+            // 内存缓存策略：FIFO
+            //        步骤 ： 1.创建移除数组，缓存排序
+            //        2.判断是否需要移除
+            //        3.不需要移除，结束l
+            //        4.需要移除，记录移除元素。更新当前缓存大小
+            //        5.清空移除内存
+            NSMutableArray *deleteArray = [NSMutableArray array];
+            NSMutableArray *cacheArray = [[strongSelf.caches allValues]mutableCopy];
+            NSSortDescriptor *dateAscendingSort = [[NSSortDescriptor alloc]initWithKey:@"date" ascending:YES];
+            [cacheArray sortUsingDescriptors:@[dateAscendingSort]];
+            
+            __block double currTotalSize = 0;
+            [cacheArray enumerateObjectsUsingBlock:^(id  _Nonnull obj, NSUInteger idx, BOOL * _Nonnull stop) {
+                LLSCachedImg *img = (LLSCachedImg*)obj;
+                currTotalSize += img.totalBytes;
+            }];
+            while (currTotalSize > strongSelf.totalCacheStandard) {
+                LLSCachedImg *deleteCacheImg = cacheArray[0];
+                [deleteArray addObject:deleteCacheImg];
+                [cacheArray removeObject:deleteCacheImg];
+                currTotalSize -= deleteCacheImg.totalBytes;
+            }
+            
+            for (LLSCachedImg *deleteCachedImg in deleteArray) {
+                [strongSelf.caches removeObjectForKey:deleteCachedImg.identifier];
+            }
+        });
     }
     
     if (isSaveToDisk) {
-        if (![DEFAULT_MANAGER fileExistsAtPath:[self p_fileLocationWithUrlKey:urlKey]]) {
-            dispatch_async(self.ioQueue, ^{
-                [DEFAULT_MANAGER createFileAtPath:[self p_fileLocationWithUrlKey:urlKey] contents:imgData attributes:nil];
-                NSLog(@"cache path is %@",[self p_fileLocationWithUrlKey:urlKey]);
-                if ([DEFAULT_MANAGER fileExistsAtPath:[self p_fileLocationWithUrlKey:urlKey]]) {
-                    NSLog(@"cache success");
-                }
-            });
-        }
+        dispatch_async(_ioQueue, ^{
+            if (![DEFAULT_MANAGER fileExistsAtPath:[self p_fileLocationWithUrlKey:urlKey]]) {
+                dispatch_async(self.ioQueue, ^{
+                    [DEFAULT_MANAGER createFileAtPath:[self p_fileLocationWithUrlKey:urlKey] contents:imgData attributes:nil];
+                    if ([DEFAULT_MANAGER fileExistsAtPath:[self p_fileLocationWithUrlKey:urlKey]]) {
+                        NSLog(@"cache success");
+                    }
+                });
+            }
+        });
     }
 }
 
 -(BOOL)selectImgWithUrlKey:(NSString*)urlKey completedBlock:(CacheCompletedBlock)completedBlock{
     BOOL isContainCache = NO;
-    UIImage *localImg = [self.caches objectForKey:urlKey];
+    LLSCachedImg *cachedImg = [self.caches objectForKey:urlKey];
+    UIImage *localImg = cachedImg.img;
     if (localImg) {
         isContainCache = YES;
         if (completedBlock) {

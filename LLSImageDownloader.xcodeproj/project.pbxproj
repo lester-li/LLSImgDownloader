@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		C63E899B2283C13700947CA3 /* LLSCachedImg.m in Sources */ = {isa = PBXBuildFile; fileRef = C63E899A2283C13700947CA3 /* LLSCachedImg.m */; };
 		C680D74D22800DF1001C06D0 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = C680D74C22800DF1001C06D0 /* AppDelegate.m */; };
 		C680D75022800DF1001C06D0 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C680D74F22800DF1001C06D0 /* ViewController.m */; };
 		C680D75322800DF1001C06D0 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C680D75122800DF1001C06D0 /* Main.storyboard */; };
@@ -41,6 +42,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		C63E89992283C13700947CA3 /* LLSCachedImg.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LLSCachedImg.h; sourceTree = "<group>"; };
+		C63E899A2283C13700947CA3 /* LLSCachedImg.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LLSCachedImg.m; sourceTree = "<group>"; };
 		C680D74822800DF1001C06D0 /* LLSImageDownloader.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = LLSImageDownloader.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C680D74B22800DF1001C06D0 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		C680D74C22800DF1001C06D0 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -164,6 +167,8 @@
 				C680D78322801D40001C06D0 /* LLSImageDownloder.m */,
 				C680D78622815C50001C06D0 /* LLSImgCache.h */,
 				C680D78722815C50001C06D0 /* LLSImgCache.m */,
+				C63E89992283C13700947CA3 /* LLSCachedImg.h */,
+				C63E899A2283C13700947CA3 /* LLSCachedImg.m */,
 				C680D78922818E14001C06D0 /* LLSImgManager.h */,
 				C680D78A22818E14001C06D0 /* LLSImgManager.m */,
 				C680D793228279F0001C06D0 /* NSString+md5.h */,
@@ -317,6 +322,7 @@
 				C680D78822815C50001C06D0 /* LLSImgCache.m in Sources */,
 				C680D78F228273DF001C06D0 /* UIImageView+LLSImageSetting.m in Sources */,
 				C680D75B22800DF5001C06D0 /* main.m in Sources */,
+				C63E899B2283C13700947CA3 /* LLSCachedImg.m in Sources */,
 				C680D78422801D40001C06D0 /* LLSImageDownloder.m in Sources */,
 				C680D795228279F0001C06D0 /* NSString+md5.m in Sources */,
 				C680D74D22800DF1001C06D0 /* AppDelegate.m in Sources */,
